@@ -1,0 +1,126 @@
+body{
+    margin:0;
+    padding: 0;
+    background-image: linear-gradient(120deg, rgb(104, 255, 215), rgb(255, 255, 112), rgb(255, 187, 198));
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    width:100vw;
+}
+h2{
+    font-family: 'Ubuntu', sans-serif;
+    color:rgb(116, 115, 115);
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+.calculator{
+    height: 70%;
+    width:30%;
+    display: flex;
+    /* border: 5px solid rgba(255, 255, 255, 0.5); */
+}
+table{
+    padding: 2%;
+    width: 100%;
+    height:100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    
+}
+.display-container{
+    margin-top:5%;
+    /* padding:2%; */
+    justify-content: space-evenly;
+    display: flex;
+    gap:2%;
+    /* background-color: white; */
+    border-radius:3%;
+}
+.display{
+    width:84%;
+    height:90%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4%;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease-in;
+}
+@keyframes blink{
+    from{
+        color:black;
+    }
+    to{
+        color:rgba(0, 0, 0, 0)
+    }
+}
+.clear{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:28%;
+    height:90%;
+    background-color: rgb(34, 214, 214);
+    border-radius: 4%;
+    color:white;
+    font-weight: bolder;
+    transition: all 0.2s ease-in;
+}
+.clear:hover{
+    transform: scale(1.05);
+    background-color: rgba(34, 214, 214,0.9);
+}
+tr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:18%;
+    width:100%;
+    justify-content: space-evenly;
+    gap:2%;
+}
+td{
+    height:15%;
+    width:15%;
+    border-radius: 4%;
+}
+.btn-white{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:90%;
+    width:90%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 4%;
+    color:black;
+    font-weight: bolder;
+    cursor:pointer;
+    transition: all 0.2s ease-in;
+}
+.btn-white:hover{
+    transform: scale(1.05);
+    background-color:rgba(255, 255, 255, 0.852)
+}
+.btn-calc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:90%;
+    width:90%;
+    background-color: rgba(216, 6, 104, 0.7);
+    border-radius: 4%;
+    color:white;
+    font-weight: bolder;
+    cursor:pointer;
+    transition: all 0.2s ease-in;
+}
+.btn-calc:hover{
+transform: scale(1.05);
+    background-color:rgba(216, 6, 104, 0.852)
+}
