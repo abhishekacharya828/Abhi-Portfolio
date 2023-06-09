@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/brands.min.css" integrity="sha512-sKhd1NGM4i4pJj+3P+NVHisu2z5rKAwNG1IpWMdKsFWYlUHFSrsAO3geQ5QNKttkMPZNTo76tfg8jVx2ICP7qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  
+  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'poppins',sans-serif;
+}
+:root
+{
+    --bg-color:#1e1e30;
+    --second-bg-color:#2c323d;
+    --text-color:#fff;
+    --main-color:cyan;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+img{
+    height: 500px;
+    width: 550px;
+    
+}
+section
+{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    padding:2%;
+    /* 
+    top: 0;
+    left: 0;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;*/
+    z-index: 100; 
+    width: 100%;
+    position: fixed;
+    color: var(--second-bg-color);
+}
+.logo
+{
+    font-size: 2.5rem;
+    color:yellow;
+    font-weight:600;
+    cursor: default;
+    float: left;
+    font-stretch: semi-expanded;
+}
+.navbar a
+{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+    /* border: solid var(--text-color); */
+   border-radius: 30px;
+}
+ 
+.navbar a:hover,
+.navbar a.active
+{
+  
+    border:1px solid black;
+    border:none;
+    color:rgb(118, 254, 254);
+     border-radius: 5px;
+     box-shadow: 0px 0px 20px aqua;
+
+
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color:var(--text-color);
+    display: none;
+}
+.home
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.home-img {
+    position:relative;
+    top:150px;
+    left:9%;
+   margin-bottom:190px;
+   width:120px;
+   height:160px;
+
+   
+}
+
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+.home-content h3:nth-of-type(2)
+{
+    margin-bottom: 2rem;
+}
+span{
+    color: var(--main-color);
+}
+.home-content h1
+{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.home-content p{
+    font-size: 1.7rem;
+}
+.social-media a
+{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height:4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    animation-name:sm;
+    animation-timing-function: ease-out; 
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+@keyframes sm {
+    from{
+        margin-left: -1000px;
+    }
+    to
+    {
+        margin-left: 0px;
+    }
+    
+}
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.btn
+{
+    display: inline-block;
+    padding: 1.2rem 1.0rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 3rem var(--main-color);
+    font-size: 3.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .3rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+.btn:hover{
+    box-shadow: none;
+}
+.about
+{
+    display: flex;
+    gap: 25rem;
+    background: var(--second-bg-color);
+}
+.about-content
+{
+    float: left;
+}
+.about-img img{
+    width:220px;
+    height:270px;
+   border: 2px solid rgb(228, 146, 14);
+   border-top-right-radius: 23px;
+   border-bottom-left-radius: 4px;
+   border-top-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+   box-shadow: 0px 0px 5px 4px rgb(45, 113, 51);
+   float: right;
+}
+.heading
+{
+    text-align: left;
+    font-size: 4.5rem;
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+.about-content h3{
+    font-size: 2.6rem;
+}
+.about-content p{
+    font-size: 1.9rem;
+    margin: 3rem 0 3rem;
+}
+/* srevices */
+.skills-section{
+    
+    height:100vh;
+    color:white;
+    background-image: url(black.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.skills-section h1{
+    font-size: 3.5em;
+    color:rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 50px;
+    position: relative;
+}
+
+.grid-container{
+    position: relative;
+    top:5%;
+    display:grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 250px 250px 250px;
+    justify-content: space-evenly;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    animation-name:abhi;
+    animation-timing-function: ease-out; 
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+@keyframes abhi {
+    from{
+        margin-left: -5000px;
+    }
+    to
+    {
+        margin-left: 0px;
+    }
+    
+}
+.grid-container .skill-container{
+    border:2px solid rgb(9, 255, 0);
+  background-color:var(--second-bg-color);
+  border-radius: 70px;
+  font-size:1.8em;
+  text-align: center;
+  padding-top:42px;
+  color:cyan;
+  transition: 1s;
+  font-weight:bold;
+  cursor: pointer;
+}
+.grid-container .skill-container:hover{
+    background: linear-gradient(to top, rgb(32, 102, 223) ,aqua);
+    color:black;
+}
+.skill-container .fa-brands{
+    font-size:1.5em;
+    padding-bottom:11px;
+}
+
+
+/* portfolio section design */
+
+.portfolio
+{
+    background: var(--second-bg-color);
+}
+.portfolio.heading
+{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+/* .portfolio-container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+     background: var(--second-bg-color); 
+    width: 100%;
+    height: 5vh;
+    gap: 15%;
+} */
+.portfolio-box{
+   height: fit-content;
+    width:250px;
+}
+  .portfolio h2{
+    margin-bottom: 4rem;
+}  
+  .portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    background-color: var(--second-bg-color); 
+    gap :2.5rem; 
+  }
+
+
+ .portfolio-container  .portfolio-box{
+    position:relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    width:100%;
+    overflow: hidden;
+    display: flex;
+}  
+.portfolio-box img{
+    height: 40%;
+    width: 100%;
+    transition: .7s ease;
+}
+.portfolio-box:hover img{
+    transform: scale(1.1);
+}
+ .portfolio-box  .portfolio-layer{
+position:absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height:100%;
+background: linear-gradient(rgba(0,0,0,.1),var(--main-color));
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+padding: 0 4rem;
+transform: translateY(100%);
+transition: .5s ease;
+}
+
+.portfolio-box:hover  .portfolio-layer{
+   transform: translateY(0); 
+}
+
+.portfolio-layer h4{
+    font-size: 3rem;
+}
+.portfolio-layer p{
+    font-size: 1.6rem;
+    margin: 3rem 0 1rem;
+}
+.portfolio-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+.portfolio-layer a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}  
+
+
+    /* Contact Section Design */
+
+ .contact h2{
+    margin-bottom: 3rem;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea
+{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+.contact form .input-box input
+{
+    width: 49%;
+}
+.contact form textarea
+{
+    resize: none;
+}
+.contact form  .btn
+{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+
+}
+.footer-text p{
+    font-size: 1.6rem;
+}
+.footer-iconTop a
+{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+}
+.footer-iconTop a i{
+    font-size:2.4rem;
+    color:var(--second-bg-color);
+}
+ /* Break Point  */
+
+ /* @media(max-width:1200px){
+ html {
+        font-size:55%
+ }
+}
+@media(max-width:990px){
+    .header {
+           padding:2rem;
+    }
+    section
+    {
+        padding:10rem 3% 2rem;
+    }
+    .footer {
+        padding: 2rem 3%;
+    }
+   }
+   @media(max-width:0px)
+   {
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    }
+    .navbar a
+    {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+   } */
+
+    <script src="https://kit.fontawesome.com/89e8694b4b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--header design-->
+    <header class="header">
+        <a href="#" class="logo"> <span>A</span></span>B<span>H</span>I<i class='bx bx-menu' id="menu-icon"></i></a>
+        
+
+
+        <nav class="navbar">
+            <a href="/portfolio.html" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#Skills">Skill's</a>
+            <a href="#portfolio">Project's</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <!-- home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello,I'm </h3>
+            <h1> <style></style> Abhishek Acharya</h1>
+            <h3>And I'm a <span>JAVA Devloper</span></h3>
+         
+                <div class="social-media">
+                    <a href="https://www.facebook.com/abhisek.acharya.902/"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://twitter.com/Abhishe67241300"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com/x_y_z_111_/"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://www.linkedin.com/in/abhishek-acharya-6060821a9/"><i class='bx bxl-linkedin'></i></a>
+
+                </div>
+                <a href="./ABHI RESUME MCA1.pdf" class="btn">Download Resume</a>
+        </div>
+        <div class="home-img">
+            <img src="abhi-removebg-preview.png" alt="" srcset="">
+        </div>
+    </section>
+
+    <!--about section design-->
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="abhi.jpg" alt="" srcset="">
+        </div>
+
+    <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Frontend Devloper</h3>
+        <p>I am a Simple man.currently pursuing MCA in GIET UNIVERSITY,<br>
+            I am very Friendly in nature and  polite in Friend 
+            circle.I like to <br> rididng the bike and cycle.when i am alone at that
+            time i want to do something <br>new which is inspire me to grow  in my
+            future.When i am hungry at that time i can not do <br> anything that's All
+            about me.
+        </p>
+    </div>    
+    </section>
+
+     <!--about service design-->
+
+     <section class="skills-section total-padding" id="Skills">
+        <h1>My <span>Skills</span></h1>
+  
+          <div class="grid-container">
+  
+              <div class="skill-container"><i class="fa-brands fa-java"></i><br>JAVA</div>
+              <div class="skill-container"><i class="fa-brands fa-c"></i><br>C</div>
+              <div class="skill-container"><i class="fa-brands fa-html5"></i><br>HTML</div>
+              <div class="skill-container"><i class="fa-brands fa-css3-alt"></i><br>CSS</div>
+               <div class="skill-container"><i class="fa-brands fa-square-js"></i><br>JAVASCRIPT</div> 
+              <!-- <div class="skill-container"><i class="fa-brands fa-react"></i><br>REACTJS</div>
+              <div class="skill-container"><i class="fa-brands fa-node"></i><br>NODEJS</div> -->
+              <!-- <div class="skill-container"><i class="fa-brands fa-bootstrap"></i><br>BOOTSTRAP</div> -->
+              <div class="skill-container"><i class="fa-solid fa-database"></i><br>MYSQL</div>
+  
+          </div>
+  
+       </section>
+
+    <!--portfolio section design-->
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">My <span>Project's</span></h2>
+
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="calculator.jpg" alt="" srcset="">
+                <div class="portfolio-layer">
+                    <h4>Digital Calculator</h4>
+                    <p>This Calculator is made by HTML,CSS and JS ,It can gives 
+                        the True value of the calculation
+                    </p>
+                    <a href="/calculator.html"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+
+            <div class="portfolio-box">
+                <img src="resume.png" alt="" srcset="">
+                <div class="portfolio-layer">
+                    <h4>Resume</h4>
+                <P>This Resume is created by HTML and CSS <br>
+                    Click to see!
+                </P>
+                    <a href="./cv.html"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+
+            <div class="portfolio-box">
+                <img src="compiler.jpg" alt="" srcset="">
+                <div class="portfolio-layer">
+                    <h4>Online Compiler</h4>
+                    <p>This is a HTML,CSS and JS compilerin which you can run 
+                        any type of html,css and javascript code. <br>Click to see!
+                    </p>
+                    <a href="./compiler.html"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+
+    <!--contact section design-->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="Name" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder="E-mail Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>  
+            <input type="submit" value="Send Message" class="btn"> 
+        </form>
+    </section>
+
+    <!--footer design-->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Abhishek | All Right Reserved</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"> <i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+
+</body>
+</html>
